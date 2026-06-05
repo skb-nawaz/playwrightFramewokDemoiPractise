@@ -23,7 +23,7 @@ class LoginPage {
    * Open OrangeHRM URL
    */
   async gotoOrangeHrm() {
-    const url = `${process.env.BASE_URL}web/index.php/auth/login`;
+    const url = `${process.env.BASE_URL}`;
 
     console.log("========== GOTO ORANGE HRM ==========");
     console.log("BASE_URL:", process.env.BASE_URL);
