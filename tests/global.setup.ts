@@ -14,8 +14,6 @@ test("global setup for auto login", async ({
   const dec_password_data = commonUtilsFixture.decryptData(password);
 
   await loginPageFixture.gotoOrangeHrm();
-  await page.waitForURL(/auth\/login/);
-  await page.locator('input[name="username"]').waitFor({ state: "visible" });
   await loginPageFixture.loginOrangeHrm(dec_userName_data, dec_password_data);
   await expect(dashBoardFixture.dashBoardText).toBeVisible();
   await page.context().storageState({
