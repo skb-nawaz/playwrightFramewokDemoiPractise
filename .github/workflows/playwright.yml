@@ -36,6 +36,20 @@ jobs:
       - name: Run Playwright Tests
         run: npx playwright test
 
+      - name: Generate Linux Snapshots
+        if: always()
+        run: |
+          npx playwright test --project=chromium --project=firefox --update-snapshots
+          zip -r visual-snapshots.zip tests/*-snapshots
+
+      - name: Upload Snapshot Zip
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: visual-snapshots
+          path: visual-snapshots.zip
+          retention-days: 30
+
       - name: Upload Playwright Report
         uses: actions/upload-artifact@v4
         if: always()
