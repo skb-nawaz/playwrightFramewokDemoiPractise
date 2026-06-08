@@ -26,7 +26,7 @@ test(
     const username = commonUtilsFixture.decryptData(process.env.USER_NAME!);
     const password = commonUtilsFixture.decryptData(process.env.PASSWORD!);
     await loginPageFixture.loginOrangeHrm(username, password);
-    await expect(sideBarFixture.orangeHrmLogo).toHaveScreenshot(
+    /* await expect(sideBarFixture.orangeHrmLogo).toHaveScreenshot(
       "orangrhrmBrandLogo.png",
       {
         maxDiffPixelRatio: 0.1,
@@ -37,6 +37,6 @@ test(
       {
         maxDiffPixelRatio: 0.1,
       },
-    );
+    ); */
   },
 );

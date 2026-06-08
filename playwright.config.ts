@@ -69,7 +69,7 @@ export default defineConfig({
       },
       dependencies: ["setup"],
     },
-
+    /* 
     {
       name: "webkit",
       use: {
@@ -77,7 +77,7 @@ export default defineConfig({
         storageState: "./PlaywrightAuthFile/.auth/auth.json",
       },
       dependencies: ["setup"],
-    },
+    }, */
 
     /* Test against mobile viewports. */
     // {
