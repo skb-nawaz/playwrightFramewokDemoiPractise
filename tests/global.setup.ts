@@ -15,8 +15,8 @@ test("global setup for auto login", async ({
   console.log("USER_NAME (Encrypted):", process.env.USER_NAME);
   console.log("PASSWORD (Encrypted):", process.env.PASSWORD);
 
-  const userName = process.env.USER_NAME ? process.env.USER_NAME : "";
-  const password = process.env.PASSWORD ? process.env.PASSWORD : "";
+  const userName = commonUtilsFixture.encryptData("orangehrm_skbn");
+  const password = commonUtilsFixture.encryptData("184G1a0126@");
 
   console.log("Username Env Exists:", !!userName);
   console.log("Password Env Exists:", !!password);
